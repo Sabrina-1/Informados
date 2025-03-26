@@ -1,82 +1,101 @@
-
 html{
-    background-color: #D9D4D1;
+  background-color: #D9D4D1;
 }
 
-.logo{
-    position: initial;
+.header {
+  padding: 10px 20px; /* Reduz o padding do cabeçalho */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px; /* Mantém um tamanho fixo */
 }
-.container{
-    display: flex;
-    flex-wrap: wrap;
-    float: right;
-}
-.busca{
-    padding: 15px 50px 15px 30px;
-    border: 1px solid rgba(255, 255, 255, .1);
-    border-radius: 35px;
-    width: 80%;
-    height: 42px;
 
+.logo img {
+  height: 200px; /* Ajuste conforme necessário */
+  max-height: 180px; /* Define um limite para a altura */
+  width: auto;
 }
-.button{
-    background-image: url("lupa.png");
-    background-color: #ffffff;/*coloca o fundo da lupa na cor branca, de acordo com o campo de entrada*/
-    background-repeat: no-repeat;
-    background-size: 1.3em; /*tamanho da lupa em relação a seu fundo*/
-    padding-right: 1.3em;
-    padding: 10px 10px 10px 10px;/*zera o background da lupa, reforçando o fundo*/
-    position: relative;
-    transform: translateY(-40%);
-    border: none;
-    border-color: #D9D4D1;
-    cursor: pointer;
-    left: 160px;
-    top: -25px;
+
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
 }
+
+.busca {
+  padding: 10px 40px 10px 15px;
+  border-radius: 35px;
+  border: 1px solid rgba(255, 255, 255, .5);
+  height: 42px;
+  width: 250px;
+  outline: none;
+  font-size: 16px;
+}
+
+.button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  background-image: url("lupa.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* Ajustando a posição do menu */
+nav {
+  margin-top: -50px; /* Deixa o menu mais próximo */
+}
+
 /*https://pt.stackoverflow.com/questions/471065/alinhar-imagem-de-lupa-dentro-do-campo-input-de-busca-html*/
 /*Cor no topo da navegação*/
 ul {
-    list-style-type: none;
-    background-color: #333;
-    margin: 50px;
-    padding: 15px;
-    overflow: hidden;
-    border-radius: 20px;
-    
+  list-style-type: none;
+  background-color: #333;
+  margin: 50px;
+  padding: 15px;
+  overflow: hidden;
+  border-radius: 20px;
+  text-align: center;
+}
 
-  }
-  .flex-container{
-     display: flex;
-     justify-content: space-around;
-  }
-  
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+}
+
 /*Estilo dos links dentro da navegação*/
-  li a{
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+li a{
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
 
-    text-decoration: none;
-    font-size: 17px;
+  text-decoration: none;
+  font-size: 23px;
 
-  }
-    
-  /* Mudar de cor ao selecionar os links */
-  li a:hover {
-    color: black;
-  }
+}
+
+/* Mudar de cor ao selecionar os links */
+li a:hover {
+  color: black;
+}
 
 div.image{
   margin: 50px;
   border: 1px solid #ccc;
   height: 350px;
   text-align: center;
-  }
+}
 
 div.image img{
   width: 100%;
   height: 100%;
+  border-radius: 10px;
 }
 
 /*https://www.w3schools.com/css/tryit.asp?filename=trycss_image_gallery_responsive*/
@@ -87,6 +106,10 @@ div.gallery{
   float:left;
   border-spacing: 10px;
   width: 24.99999%;
+
+  border-radius: 10px; /* Bordas suavizadas */
+  overflow: hidden; /* Garante que a imagem dentro siga o formato */
+  /*ox-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);  Adiciona um leve sombreamento */
 }
 
 /*alinha o box das imagens*/
@@ -99,9 +122,11 @@ div.gallery{
 div.gallery:hover{
   border: 1px solid #505A63;
 }
+
 div.gallery img {
   width: 100%;
   height: auto;
+  border-radius: 10px; /*Borda arredondada*/
 }
 
 div.desc {
@@ -109,3 +134,44 @@ div.desc {
   text-align: center;
 }
 
+.rodape {
+  background-color: #2d2f30;
+  color: #f2f2f2;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  border-radius: 5px; /* Bordas arredondadas */
+}
+
+.rodape-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Corrigi o erro de digitação */
+}
+
+.logo_rodape a {
+  display: flex;
+  align-items: center; /* Centraliza o texto */
+  text-decoration: none;
+  background-color: white;
+  color: black; /* Ajustei a cor do texto para ser visível */
+  padding: 10px 10px;
+  font-weight: bold;
+
+}
+.logi img {
+  height: 40px; /* Ajuste a altura conforme necessário */
+  width: auto; /* Mantém a proporção */
+  max-height: 50px; /* Garante que a imagem não ultrapasse um limite */
+  border-radius: 3px;
+}
+
+.desenvolvedores {
+  font-size: 12px; /* Reduzi um pouco a fonte */
+  text-align: center;
+}
